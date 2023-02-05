@@ -33,6 +33,8 @@ body {
 
 .score-section {
   display: flex;
+  flex-direction: column;
+  justify-content: space-around;
   font-size: 24px;
   align-items: center;
 }
@@ -105,4 +107,9 @@ button:focus {
 
 button svg {
   margin-right: 5px;
+}
+
+.score-section button {
+  max-width: 70%;
+  justify-content: center;
 }

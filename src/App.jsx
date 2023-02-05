@@ -59,10 +59,19 @@ export default function App() {
     }
   }
 
+  const handleReset = () => {
+	setCurrentQuestion(0)
+	setShowScore(false)
+	setScore(0)
+  }
+
 	return (
 		<div className='app'>
 			{showScore ? (
-				<div className='score-section'>You scored {score} out of {questions.length}</div>
+				<div className='score-section'>
+					<div>You scored {score} out of {questions.length}</div>
+					<button onClick={handleReset}>Reset</button>
+				</div>
 			) : (
 				<>
 					<div className='question-section'>
